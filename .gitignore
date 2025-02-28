@@ -1,0 +1,10 @@
+# Venv
+venv
+.env
+
+# Cache
+__pycache__
+
+#VScode
+.vscode
+#Alembic

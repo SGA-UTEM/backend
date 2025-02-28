@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Correo de Resultado</title>
+    </head>
+    <body
+        style="
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        "
+    >
+        <div
+            style="
+                max-width: 600px;
+                margin: 20px auto;
+                background-color: white;
+                overflow: hidden;
+            "
+        >
+            <!-- Imagen superior -->
+            <img
+                src="cid:header"
+                alt="Encabezado UTEM"
+                style="display: block; width: 100%; height: auto"
+            />
+
+            <!-- Contenido principal -->
+            <div style="padding: 20px">
+                <strong style="margin: 0 0 10px">Estimado/a,</strong>
+                <p style="margin: 0">
+                    Junto con saludar, informamos que la solicitud de ayudantía
+                    que realizó para la asignatura
+                    <strong>{materia}</strong>, se encuentra
+                    <span style="font-weight: bold; color: red">RECHAZADA</span
+                    >.
+                </p>
+            </div>
+
+            <!-- Imagen inferior -->
+            <img
+                src="cid:footer"
+                alt="Pie UTEM"
+                style="display: block; width: 100%; height: auto"
+            />
+        </div>
+    </body>
+</html>
