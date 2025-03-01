@@ -19,10 +19,7 @@ router = fastapi.APIRouter(
 from app.db.db import Session, get_db
 
 
-@router.post(
-    "",
-    response_model=Res[str],
-)
+@router.post("", response_model=Res[str], tags=["Auntenticacion"])
 async def inicio_sesion(
     auth: Auntenticacion, db: Session = fastapi.Depends(get_db)
 ) -> Res:

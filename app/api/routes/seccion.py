@@ -18,10 +18,7 @@ router = fastapi.APIRouter(
 from app.db.db import Session, get_db
 
 
-@router.get(
-    "/{idMateria}",
-    response_model=Res[str],
-)
+@router.get("/{idMateria}", response_model=Res[str], tags=["Seccion"])
 async def recibir_postulaciones(
     idMateria: int,
     db: Session = fastapi.Depends(get_db),

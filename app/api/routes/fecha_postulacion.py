@@ -20,10 +20,7 @@ router = fastapi.APIRouter(
 from app.db.db import Session, get_db
 
 
-@router.post(
-    "",
-    response_model=Res[str],
-)
+@router.post("", response_model=Res[str], tags=["Fecha de postulacion"])
 async def crear_fecha_postuacion(
     fecha: FechaPostulacion, db: Session = fastapi.Depends(get_db)
 ) -> Res:
@@ -37,10 +34,7 @@ async def crear_fecha_postuacion(
     )
 
 
-@router.get(
-    "",
-    response_model=Res[str],
-)
+@router.get("", response_model=Res[str], tags=["Fecha de postulacion"])
 async def recibir_fechas_postulacion(db: Session = fastapi.Depends(get_db)) -> Res:
     fechas = fechas_postulacion_service.recibir_fechas_postulacion(db=db)
     return responses.JSONResponse(
@@ -52,10 +46,7 @@ async def recibir_fechas_postulacion(db: Session = fastapi.Depends(get_db)) -> R
     )
 
 
-@router.post(
-    "/asignar",
-    response_model=Res[str],
-)
+@router.post("/asignar", response_model=Res[str], tags=["Fecha de postulacion"])
 async def asignar_fecha(
     id_fecha: AsignarFecha, db: Session = fastapi.Depends(get_db)
 ) -> Res:

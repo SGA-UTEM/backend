@@ -20,10 +20,7 @@ router = fastapi.APIRouter(
 from app.db.db import Session, get_db
 
 
-@router.post(
-    "",
-    response_model=Res[str],
-)
+@router.post("", response_model=Res[str], tags=["Postulantes"])
 async def postular_ayundatias(
     postulante: PostulanteBody, db: Session = fastapi.Depends(get_db)
 ) -> Res:
@@ -37,10 +34,7 @@ async def postular_ayundatias(
     )
 
 
-@router.get(
-    "",
-    response_model=Res[str],
-)
+@router.get("", response_model=Res[str], tags=["Postulantes"])
 async def recibir_postulaciones(
     page: int = Query(default=1, ge=1),
     items_per_page: int = Query(default=10, ge=1),
@@ -58,10 +52,7 @@ async def recibir_postulaciones(
     )
 
 
-@router.post(
-    "/interactuar",
-    response_model=Res[str],
-)
+@router.post("/interactuar", response_model=Res[str], tags=["Postulantes"])
 async def interactuar_postulacion(
     estado_postulacion: EstadoPostulacion,
     db: Session = fastapi.Depends(get_db),

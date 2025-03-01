@@ -19,10 +19,7 @@ router = fastapi.APIRouter(
 from app.db.db import Session, get_db
 
 
-@router.get(
-    "",
-    response_model=Res[str],
-)
+@router.get("", response_model=Res[str], tags=["Estudiantes"])
 async def get_estudiantes(
     page: int = Query(default=1, ge=1),
     items_per_page: int = Query(default=10, ge=1),
@@ -40,7 +37,7 @@ async def get_estudiantes(
     )
 
 
-@router.get("/{id}", response_model=Res[str])
+@router.get("/{id}", response_model=Res[str], tags=["Estudiantes"])
 async def get_estudiante(id: str, db: Session = fastapi.Depends(get_db)) -> Res:
 
     estudiante = estudiantes_service.get_estudiante({"id": id}, db=db, return_json=True)
@@ -49,7 +46,7 @@ async def get_estudiante(id: str, db: Session = fastapi.Depends(get_db)) -> Res:
     )
 
 
-@router.get("/materias/{id}", response_model=Res[str])
+@router.get("/materias/{id}", response_model=Res[str], tags=["Estudiantes"])
 async def get_materias_estudiante(
     id: str,
     page: int = Query(default=1, ge=1),
@@ -65,7 +62,7 @@ async def get_materias_estudiante(
     )
 
 
-@router.get("/materias_aprobadas/{id}", response_model=Res[str])
+@router.get("/materias_aprobadas/{id}", response_model=Res[str], tags=["Estudiantes"])
 async def get_materias_estudiante_aprobadas(
     id: str,
     page: int = Query(default=1, ge=1),

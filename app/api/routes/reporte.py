@@ -18,10 +18,7 @@ router = fastapi.APIRouter(
 from app.db.db import Session, get_db
 
 
-@router.get(
-    "/ayudante/{id_ayudante}",
-    response_model=Res[str],
-)
+@router.get("/ayudante/{id_ayudante}", response_model=Res[str], tags=["Reportes"])
 async def recibir_reportes_ayudante(
     id_ayudante: int,
     db: Session = fastapi.Depends(get_db),
@@ -36,10 +33,7 @@ async def recibir_reportes_ayudante(
     )
 
 
-@router.get(
-    "/seccion/{id_seccion}",
-    response_model=Res[str],
-)
+@router.get("/seccion/{id_seccion}", response_model=Res[str], tags=["Reportes"])
 async def recibir_reportes_seccion(
     id_seccion: int,
     db: Session = fastapi.Depends(get_db),
@@ -54,10 +48,7 @@ async def recibir_reportes_seccion(
     )
 
 
-@router.get(
-    "",
-    response_model=Res[str],
-)
+@router.get("", response_model=Res[str], tags=["Reportes"])
 async def recibir_reportes(
     db: Session = fastapi.Depends(get_db),
 ) -> Res:
