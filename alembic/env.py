@@ -17,6 +17,7 @@ from app.models import (
     seccion,
     cordinador,
     reportes,
+    evaluation,
 )
 
 import logging

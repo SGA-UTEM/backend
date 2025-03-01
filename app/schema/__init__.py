@@ -6,6 +6,7 @@ from .seccion import SeccionSchema
 from .ayudante import AyudanteSchema
 from .reportes import ReporteSchema
 from .fecha_postulacion import FechaPostulacionSchema
+from .evaluation import EvaluationSchema
 
 __all__ = [
     "EstudianteSchema",
@@ -16,4 +17,5 @@ __all__ = [
     "AyudanteSchema",
     "ReporteSchema",
     "FechaPostulacionSchema",
+    "EvaluationSchema",
 ]

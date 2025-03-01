@@ -32,3 +32,6 @@ class Ayudante(Base):
     )
     seccion: Mapped["Seccion"] = relationship("Seccion", back_populates="ayudante")
     reporte: Mapped["Reporte"] = relationship("Reporte", back_populates="ayudante")
+    evaluation: Mapped["Evaluation"] = relationship(
+        "Evaluation", back_populates="ayudante"
+    )

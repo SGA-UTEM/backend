@@ -24,6 +24,7 @@ from app.api.routes.seccion import router as seccion_router
 from app.api.routes.ayudantes import router as ayudante_router
 from app.api.routes.reporte import router as reporte_router
 from app.api.routes.fecha_postulacion import router as fecha_postulacion_router
+from app.api.routes.evaluation import router as evaluation_router
 
 # logging.basicConfig()
 # logging.getLogger("sqlalchemy.engine").setLevel(logging.INFO)
@@ -128,3 +129,4 @@ app.include_router(seccion_router)
 app.include_router(ayudante_router)
 app.include_router(reporte_router)
 app.include_router(fecha_postulacion_router)
+app.include_router(evaluation_router)

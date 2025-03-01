@@ -9,6 +9,7 @@ from .seccion import Seccion
 from .ayudante import Ayudante
 from .reportes import Reporte
 from .fecha_postulacion import FechaPostulacion
+from .evaluation import Evaluation
 
 __all__ = [
     "Estudiante",
@@ -22,4 +23,5 @@ __all__ = [
     "Ayudante",
     "Reporte",
     "FechaPostulacion",
+    "Evaluation",
 ]
