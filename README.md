@@ -73,4 +73,4 @@ Puerto expuesto (en ambos Dockerfiles): `6060`
 
 ![Modelo de Base de Datos](BD.png)
 
-Se recomienda adaptar la base de datos del sistema para que se integre de manera eficiente con la base de datos de la universidad, facilitando una sinergia óptima con el entorno académico.
+Se recomienda adaptar el sistema de gestion de ayudantias con la base de datos de la Universidad Tecnologica Metropolitana, para una integracion correcta y funcionamiento eficiente.
