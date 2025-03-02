@@ -71,6 +71,6 @@ Puerto expuesto (en ambos Dockerfiles): `6060`
 
 ## Recomendaciones
 
-![Modelo de Base de Datos](https://prnt.sc/983JUx8Z_1Gx)
+![Modelo de Base de Datos](BD.png)
 
 Se recomienda adaptar la base de datos del sistema para que se integre de manera eficiente con la base de datos de la universidad, facilitando una sinergia óptima con el entorno académico.
