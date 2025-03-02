@@ -1,6 +1,6 @@
 # Backend sistema de gestion de ayudantias
 
-## Requirements
+## Requerimientos
 
 -   Python3.10+
 -   Docker
@@ -26,13 +26,29 @@ source ./venv/bin/active || source ./venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
-4. Run
+4. Correr
 
 ```bash
 sudo docker compose up app --attach app
 ```
 
-### Docker
+5. Inicializar base de datos
+
+La creacion de la base de datos se realiza segun los modelos y `alembic` para generar las migraciones.
+
+Genera la migracion de manera automatica
+
+```
+alembic revision --autogenerate
+```
+
+Aplica la migración en la base de datos
+
+```
+alembic upgrade head
+```
+
+## Docker
 
 `Dockerfile.dev`
 `Dockerfile.prod`
@@ -52,3 +68,9 @@ Puerto expuesto (en ambos Dockerfiles): `6060`
 ```
   GET /api/v1/redoc
 ```
+
+## Recomendaciones
+
+![Modelo de Base de Datos](https://prnt.sc/983JUx8Z_1Gx)
+
+Se recomienda adaptar la base de datos del sistema para que se integre de manera eficiente con la base de datos de la universidad, facilitando una sinergia óptima con el entorno académico.
